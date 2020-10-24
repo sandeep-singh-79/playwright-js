@@ -1,0 +1,24 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "playwright js practice and exploration",
+  "main": "playwright1.js",
+  "dependencies": {
+    "playwright": "^1.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sandeep-singh-79/playwright-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sandeep-singh-79/playwright-js/issues"
+  },
+  "homepage": "https://github.com/sandeep-singh-79/playwright-js#readme"
+}
