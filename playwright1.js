@@ -5,11 +5,20 @@ const playwright = require('playwright');
   const page = await browser.newPage();
 
   const modal_button_selector = '.modal-footer > button'
-  await page.goto('https://native-land.ca/');
-  await page.waitForSelector(modal_button_selector)
-  await page.click(modal_button_selector)
+  const search_selector = 'input[placeholder=Search]'
+  const location_selector = 'li.active > a'
 
-  await page.screenshot({ path: 'example.png' });
+  with(page) {
+    await goto("https://native-land.ca/");
+    await waitForSelector(modal_button_selector);
+    await click(modal_button_selector);
+
+    await click(search_selector)
+    await keyboard.type('Philadelphia')
+    await waitForSelector(location_selector)
+
+    await screenshot({ path: "example.png" });
+  }
 
   await browser.close();
 })();
