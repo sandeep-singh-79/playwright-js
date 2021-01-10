@@ -2,7 +2,7 @@
   "name": "js",
   "version": "1.0.0",
   "description": "playwright js practice and exploration",
-  "main": "playwright1.js",
+  "main": "./tests/playwright1.js",
   "dependencies": {
     "jest": "^26.6.3",
     "jest-playwright": "0.0.1",
@@ -11,7 +11,7 @@
     "playwright-chromium": "^1.7.1"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "npx test ./tests/tests/playwright1.js"
   },
   "repository": {
     "type": "git",

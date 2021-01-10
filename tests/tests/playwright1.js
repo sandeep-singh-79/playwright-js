@@ -1,5 +1,5 @@
 const playwright = require("playwright");
-const dummyPage = require("../pages/dummyPage")
+const { HomePage } = require("../pages/HomePage")
 
 // using IIFE to do a basic flow
 (async () => {
@@ -8,6 +8,7 @@ const dummyPage = require("../pages/dummyPage")
     slowMo: 100,
   });
   const page = await browser.newPage();
+  const homePage = new HomePage(page)
 
   const modal_button_selector = ".modal-footer > button";
   const search_selector = "input[placeholder=Search]";
@@ -15,7 +16,7 @@ const dummyPage = require("../pages/dummyPage")
   const results_selector = ".results-tab";
 
   with (page) {
-    await goto("https://native-land.ca/");
+    homePage.navigateTo();
     await waitForSelector(modal_button_selector);
     await click(modal_button_selector);
 
