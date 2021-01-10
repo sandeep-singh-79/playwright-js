@@ -11,7 +11,7 @@
     "playwright-chromium": "^1.7.1"
   },
   "scripts": {
-    "test": "npx test ./tests/tests/playwright1.js"
+    "test": "node ./tests/tests/playwright1.js"
   },
   "repository": {
     "type": "git",

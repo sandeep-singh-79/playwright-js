@@ -1,5 +1,5 @@
 const playwright = require("playwright");
-const { HomePage } = require("../pages/HomePage")
+const { HomePage } = require("../pages/HomePage");
 
 // using IIFE to do a basic flow
 (async () => {
@@ -8,7 +8,7 @@ const { HomePage } = require("../pages/HomePage")
     slowMo: 100,
   });
   const page = await browser.newPage();
-  const homePage = new HomePage(page)
+  const homePage = new HomePage(page);
 
   const modal_button_selector = ".modal-footer > button";
   const search_selector = "input[placeholder=Search]";
