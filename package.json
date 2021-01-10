@@ -8,7 +8,8 @@
     "jest-playwright": "0.0.1",
     "jest-playwright-preset": "^1.4.3",
     "playwright": "^1.7.1",
-    "playwright-chromium": "^1.7.1"
+    "playwright-chromium": "^1.7.1",
+    "playwright-firefox": "^1.7.1"
   },
   "scripts": {
     "test": "node ./tests/tests/playwright1.js"
