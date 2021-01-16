@@ -23,6 +23,18 @@ class HomePage {
 
     await this.page.click(this.location_selector);
   }
+
+  async captureNativeNationText() {
+    await this.page.waitForSelector(`${this.results_selector} > p`);
+
+    const results = await this.page.$(this.results_selector);
+    const text = await results.evaluate((element) => element.innerText);
+    console.log(text);
+  }
+
+  async captureScreenshot() {
+    await this.page.screenshot({path: "example.png"});
+  }
 }
 
 module.exports = { HomePage };
